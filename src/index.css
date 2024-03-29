@@ -5,69 +5,118 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background-color: #f2f2f2;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .favButton{
-  background-color: rgba(136, 136, 136, 0.116);
+  background-color: rgba(23, 203, 216, 0.5);
   padding: 10px;
-  border: none;
+  margin: 5px;
+  border: 1px solid #230479;
   width: 100%;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.favButton:hover {
+  background-color: #3d3b3b;
 }
 
 h1{
   text-align: center;
+  color: #92cdf5;
 }
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  width: 100%;
+  height: 3rem;
+  justify-content: space-around;
+  align-items: center;
   padding: 1rem;
+  background-color: #2b3742;
+}
+
+.themeButton {
+  background-color: #7bd2f5;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.themeButton:hover {
+  transform: rotate(180deg);
 }
 
 a{
-  color: #000;
+  color: #92cdf5;
+  margin: 0.8rem;
   text-decoration: none;
-  margin: 5px;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 a:hover{
-  color: rgb(136, 136, 136);
+  color: #ffffff;
 } 
 
 footer {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   text-align: center;
-  padding: 2rem;
   position: relative;
+  width: 100%;
   bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #92cdf5;
 }
 
-footer > img{
+footer img {
   width: 200px;
   margin: 0;
 }
-footer > p{
-  margin: 0;
-  padding-top: 0.7rem;
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.socialMedia img {
+  width: 2rem;
+  padding-left: 1rem;
+}
+
+.contactBox {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
 }
 
 form{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 300px;
+  width: 30rem;
   height: 100px;
-  margin: 0 auto;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+.inputForm input, button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.error {
+  padding-bottom: 1rem;
 }
 
 .card{
@@ -77,11 +126,15 @@ form{
   align-items: center;
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
+  border: 0.5px solid #2980b9;
+}
+
+.card img {
+  width: 100%;
 }
 
 .card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
+  border: 0.5px solid #3f19e6;
 }
 
 .card-grid{
@@ -92,19 +145,26 @@ form{
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.dentistInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem;
 }
 
 table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
-
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 95%;
+  display: table;
+  border: 1px solid #ccc;
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #000;
   text-align: left;
   padding: 8px;
 }
@@ -113,10 +173,27 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark{
-  background-color: #12121296;
-  color: white;
+.favs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.navbar.light {
+  background-color: #6f7070;
+}
+
+
+.dark {
+  background-color: #3d3b3b;
+  color: #fff;
+}
+
 .dark > a {
-  color: white;
+  color: #fff;
+}
+
+.tableRow.dark {
+  background-color: #333;
+  color: #fff;
 }
